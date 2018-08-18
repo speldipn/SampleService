@@ -34,13 +34,14 @@ public class SmsActivity extends AppCompatActivity {
 
   @Override
   protected void onNewIntent(Intent intent) {
-    processIntent(intent);
+      processIntent(intent);
     
     super.onNewIntent(intent);
   }
 
   private void processIntent(Intent intent) {
     if(intent != null) {
+
       String sender = intent.getStringExtra("sender");
       String contents = intent.getStringExtra("contents");
       String receivedDate = intent.getStringExtra("receivedDate");
